@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: quangpn88
+    repository: jenkinsx-demo
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jenkins.quangphan.dev
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: quangpn88
   repository: bucketrepo
   secretStorage: local
   vault: {}
